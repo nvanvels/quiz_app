@@ -35,4 +35,6 @@ class StartScreen extends StatelessWidget{
   // HOMEWORK: Make a quiz widget (stateful). Make it load in main. Instead of startscreen, load quiz in main and inside of quiz, load startscreen.
   // quiz.dart stateful widget in main
   // StartScreen() in quiz.dart
+
+  // questionScreen.dart should be stateful. Will change the question
 }
