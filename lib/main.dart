@@ -15,7 +15,7 @@ void main() {
               ],
             ),
           ),
-          child: QuizScreen(),
+          child: Quiz(),
         ),
       ),
     ),

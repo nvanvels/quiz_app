@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/start_screen.dart';
 
-class QuizScreen extends StatefulWidget {
-  
+class Quiz extends StatefulWidget {
+  const Quiz({super.key});
   @override
   State<StatefulWidget> createState() {
 
@@ -10,7 +10,7 @@ class QuizScreen extends StatefulWidget {
   }
  
 }
- class _QuizState extends State<QuizScreen>{
+ class _QuizState extends State<Quiz>{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
