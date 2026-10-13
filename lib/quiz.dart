@@ -18,6 +18,7 @@ class Quiz extends StatefulWidget {
       activeScreen = QuestionsScreen();
     });
   }
+  @override
   void initState(){
   activeScreen = StartScreen(switchScreen);
   super.initState();
@@ -25,7 +26,6 @@ class Quiz extends StatefulWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return activeScreen!;
   }
 
