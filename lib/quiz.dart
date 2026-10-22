@@ -6,16 +6,23 @@ class Quiz extends StatefulWidget {
   const Quiz({super.key});
   @override
   State<Quiz> createState() {
-
       return _QuizState();
   }
- 
 }
+
  class _QuizState extends State<Quiz> {
   Widget? activeScreen;
+  final List<String> selectedAnswers = [];
+ //Make this in quiz so every screen can see it
+  void chooseAnswer(String answer) {
+    selectedAnswers.add(answer);
+  }
+
+
   void switchScreen() {
     setState(() {
-      activeScreen = QuestionsScreen();
+      activeScreen = QuestionsScreen(
+        onSelectedAnswer: chooseAnswer);
     });
   }
   
