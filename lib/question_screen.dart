@@ -9,7 +9,6 @@ class QuestionsScreen extends StatefulWidget {
   final void Function(String answer) onSelectedAnswer;
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _QuestionScreenState();
   }
 }
