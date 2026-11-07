@@ -9,8 +9,9 @@ class ResultsScreen extends StatelessWidget{
   required this.onPressed, 
   });
 
-  final List<String> chosenAnswers;
   final void Function() onPressed; // created onPressed function for the quiz to reset
+  final List<String> chosenAnswers;
+  
 
 
    List<Map<String, Object>> getSummaryData() {
