@@ -30,8 +30,17 @@ class ResultsScreen extends StatelessWidget{
 
     return summary;
   }  
-@override
-  Widget build(context) {
+  @override
+  Widget build(BuildContext context){
+    final summaryData = getSummaryData();
+    final numTotalQuestions = questions.length;
+    int numCorrectQuestions = 0;
+    for( var i = 0; i < summaryData.length; i++){
+      if(summaryData[i]['user_answer'] == summaryData[i]['correct_answer']) {
+        numCorrectQuestions++;
+      }
+    }
+
     return SizedBox(
       width: double.infinity,
       child: Container(
@@ -40,7 +49,14 @@ class ResultsScreen extends StatelessWidget{
         child:  Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:  [
-            const Text('You answered X out of Y questions Correctly'),
+            Text(
+              'You answered $numCorrectQuestions out of $numTotalQuestions questions Correctly',
+              style: GoogleFonts.lato(
+                color: Colors.white, 
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                ),
+              ),
             const SizedBox(height:30),
             QuestionsSummary(summaryData: getSummaryData()),
             const SizedBox(height:30),
