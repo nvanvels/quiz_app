@@ -5,8 +5,12 @@ import 'package:quiz_app/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget{
   const ResultsScreen({super.key, 
-  required this.chosenAnswers});
+  required this.chosenAnswers,
+  required this.onPressed, 
+  });
+
   final List<String> chosenAnswers;
+  final void Function() onPressed; // created onPressed function for the quiz to reset
 
 
    List<Map<String, Object>> getSummaryData() {

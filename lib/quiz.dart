@@ -22,7 +22,9 @@ class Quiz extends StatefulWidget {
      // selectedAnswers = []; for HW, when going back to do the quiz again, will have to use this
       setState((){
           activeScreen = ResultsScreen(
-            chooseAnswers: selectedAnswers,);
+            chosenAnswers: selectedAnswers,
+            onPressed: resetQuiz, // updated button onPressed to reset the quiz
+        );
      });
     }
   }
@@ -33,6 +35,14 @@ class Quiz extends StatefulWidget {
         onSelectedAnswer: chooseAnswer);
     });
   }
+// create method button to restart quiz
+  void resetQuiz() {
+    setState(() {
+      selectedAnswers = [];
+      activeScreen = QuestionsScreen(onSelectedAnswer: chooseAnswer);
+    });
+  }
+  
   
   @override
   void initState(){
