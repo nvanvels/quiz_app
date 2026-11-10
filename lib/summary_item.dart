@@ -36,7 +36,7 @@ class SummaryItem extends StatelessWidget{
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      'You chose: ${itemData['user_answer']}',
+                      'Your answer: ${itemData['user_answer']}',
                       style: GoogleFonts.lato(
                         fontSize: 18,
                         color: isCorrectAnswer

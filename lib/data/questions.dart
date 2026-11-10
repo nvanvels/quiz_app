@@ -1,11 +1,11 @@
 import 'package:quiz_app/models/quiz_question.dart';
 
 const questions = [
-  QuizQuestion('How did Ed lose his Arm?', [
-    'Putting his brothers soul in a suit of armor',
-    'In a Duel',
-    'In a Kitche Accident',
-    'He has not lost his arm',
+  QuizQuestion('What continent is Brazil located?', [
+    'South America',
+    'Asia',
+    'North America',
+    'Europe',
   ]),
   QuizQuestion(
 'How many presidents are there in the US?', [
@@ -16,9 +16,9 @@ const questions = [
 ]),
   QuizQuestion(
     'Which one of these is not a state?', [
-      'New York',
-      'Virginia',
       'Canada',
+      'Virginia',
+      'New York',
       'Florida',
 ]),
   QuizQuestion(
@@ -30,9 +30,9 @@ const questions = [
 ]),
   QuizQuestion(
     'Whats the symbol for math?', [
-      '!',
-      '@',
       '*',
+      '@',
+      '!',
       '+',
 ]),
   QuizQuestion(
